@@ -48,9 +48,21 @@ header {
     gap: 10px; /* Adds spacing between items */
 }
 
-.profilepic {
+.image {
     width: 150px; /* Adjust image size */
 }
+
+h2 {
+    text-align: center;
+}
+
+hr {
+            width: 50%; /* Line will be 50% of the parent container's width */
+            border: none;
+            height: 2px; /* Line thickness */
+            background-color: #333; /* Line color */
+            margin: 20px auto; /* Center the line horizontally */
+        }
 
 .dark-grey {
     padding: 1rem;
