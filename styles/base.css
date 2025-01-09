@@ -46,6 +46,7 @@ header {
     grid-column: 1 / 4;
     background: #333333;
     color: white;
+    text-align: center;
 }
 
 .left-sidebar {
