@@ -41,6 +41,17 @@ header {
     grid-column: 1 / 4;
 }
 
+.flex-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    justify-content: space-between;
+    gap: 10px; /* Adds spacing between items */
+}
+
+.image {
+    width: 150px; /* Adjust image size */
+}
+
 .dark-grey {
     padding: 1rem;
     grid-column: 1 / 4;
