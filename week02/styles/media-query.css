@@ -26,3 +26,20 @@ section {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (min-width: 500px) {
+    header {
+        background-color: black;
+        color: #fff;
+    }
+    main {
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
