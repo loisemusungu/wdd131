@@ -54,12 +54,12 @@ h1 {
 	display: block;
 }
 
-/* .active::before {
+.active::before {
 	content: "📍";  /* just a wayfinding symbol for the user */
-/* } */
+} 
 
 .stuff {
-	margin: .5m;
+	margin: .5rem;
 	border: 1px solid rgba(0,0,0,.1);
 	background-color: #bed;
 	max-width: 580px;
