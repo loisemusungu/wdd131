@@ -20,12 +20,16 @@ h1 {
 
 main {
 	display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 h2 {
 	color: navy;
 	text-align: left;
+    grid-column: 1 / -1;
+
 }
+
 
 article p {
 	text-align: justify;
@@ -34,6 +38,7 @@ article p {
 .callout {
 	color: black;
 	background-color: #EEEEEE;
+    grid-column: 1/2;
 }
 
 footer {
