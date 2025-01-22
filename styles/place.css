@@ -47,12 +47,13 @@ p {
 section {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
     text-align: center;
     justify-content: center;
     background-color: beige;
     padding: 10px;
     border: 1px solid black;
-    opacity: 0.8;
+    opacity: 0.8;;
 }
 
 img {
