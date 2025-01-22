@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    justify-items: center;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding: 10px 80px 5px 10px;
+    background-color: purple;
+    color: white;
+}
+
+p {
+    font-size: 1.2rem;
+    padding: 10px;
+}
