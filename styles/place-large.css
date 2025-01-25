@@ -1,7 +1,6 @@
 @media (min-width: 1024px) {
     body {
         max-width: 1200px;
-        max-height: auto;
         margin: 0 auto;
     }
 
