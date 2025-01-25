@@ -39,9 +39,21 @@
             <p><b>Temperature:</b> <span>27°C</span></p>
             <p><b>Humidity:</b> <span>70%</span></p>
             <p><b>Wind:</b> <span>10 km/h</span></p>
-            <p><b>Wind Chill:</b> <Span>9.8°C</Span></p>
+            <p><b>Wind Chill:</b> <Span>27.0°C</Span></p>
         </section>
     </div>
+    <section class="windchill">
+    <h2>Wind Chill Calculator</h2>
+    <form id="windchillForm">
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" id="temperature" required>
+        <label for="windSpeed">Wind Speed (km/h):</label>
+        <input type="number" id="windSpeed" required>
+        <button type="submit">Calculate</button>
+    </form>
+    <p id="windchillResult">Wind Chill: --</p>
+</section>
+
     <footer class="yellow">
             <div>
                 &copy;
