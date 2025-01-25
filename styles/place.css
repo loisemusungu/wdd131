@@ -1,19 +1,12 @@
-:root {
-    --primary-color: purple;
-    --secondary-color: beige;
-}
-
-/* Body */
 body {
     font-family: "Poppins", serif;
     font-weight: 400;
     margin: 0 auto;
     max-width: 800px;
-    background-color: var(--secondary-color);
+    background-color: beige;
     border: 1px solid black;
 }
 
-/* Header */
 header {
     padding: 2rem;
     grid-column: 1 / 4;
@@ -23,20 +16,57 @@ h1 {
     font-size: 3rem;
 }
 
-/* Section Styling */
+h2 {
+    font-size: 1.5rem;
+    padding: 10px 80px 5px 10px;
+    background-color: purple;
+    color: white;
+}
+
+p {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.yellow {
+    padding: 1rem;
+    grid-column: 1 / 2;
+    background: yellow;
+    color: black;
+    text-align: center;
+}
+
 section {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
     text-align: center;
     justify-content: center;
-    background-color: var(--secondary-color);
+    background-color: beige;
     padding: 10px;
     border: 1px solid black;
-    opacity: 0.8;
+    opacity: 0.8;;
 }
 
-/* Windchill Box */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+/* Windchill */
 .windchill {
     margin: 20px auto;
     padding: 20px;
@@ -68,7 +98,7 @@ section {
 }
 
 .windchill button {
-    background-color: var(--primary-color);
+    background-color: purple;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -85,14 +115,4 @@ section {
     font-size: 1.4rem;
     margin-top: 15px;
     color: #333;
-}
-
-/* Add a ::after pseudo-element to add content to the header */
-header::after {
-    content: "Welcome to the Windchill Calculator!";
-    display: block;
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top: 15px;
-    color: var(--primary-color);
 }

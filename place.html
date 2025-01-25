@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W03 Assignment | WDD 131 | Loise Musungu</title>
+    <title>My Country Kenya | WDD 131 | Loise Musungu</title>
     <meta name="description" content="This page is about my country">
     <meta name="author" content="Loise Musungu">
 
@@ -19,40 +19,41 @@
     <header class="yellow">
         <h1>Kenya</h1>
     </header>
-    <figure>
-        <img src="images/elephant.avif" alt="African elephant">
-    </figure>
-    <div class="main">
-        <section class="data">
-            <h2>Data</h2>
-            <p><b>Area:</b> <span>580,367 square kilometers</span></p>
-            <p><b>Population:</b> <span>54.4 million</span></p>
-            <p><b>Capital:</b> <span>Nairobi</span></p>
-            <p><b>Official Languages:</b> <span>English and Swahili</span></p>
-            <p><b>Currency:</b> <span>Kenyan Shilling</span></p>
+    <main>
+        <figure>
+            <img src="images/elephant.webp" alt="African elephant" srcset="">
+        </figure>
+        <div class="main">
+            <section class="data">
+                <h2>Data</h2>
+                <p><b>Area:</b> <span>580,367 square kilometers</span></p>
+                <p><b>Population:</b> <span>54.4 million</span></p>
+                <p><b>Capital:</b> <span>Nairobi</span></p>
+                <p><b>Official Languages:</b> <span>English and Swahili</span></p>
+                <p><b>Currency:</b> <span>Kenyan Shilling</span></p>
+            </section>
+            <section class="weather">
+                <h2>Weather</h2>
+                <figure>
+                    <img class="weather-icon" src="images/weather-icon.webp" alt="weather icon">
+                </figure>
+                <p><b>Temperature:</b> <span>23°C</span></p>
+                <p><b>Humidity:</b> <span>70%</span></p>
+                <p><b>Wind:</b> <span>10 km/h</span></p>
+            </section>
+        </div>
+        <section class="windchill">
+            <h2>Wind Chill Calculator</h2>
+            <form id="windchillForm">
+                <label for="temperature">Temperature (°C):</label>
+                <input type="number" id="temperature" required>
+                <label for="windSpeed">Wind Speed (km/h):</label>
+                <input type="number" id="windSpeed" required>
+                <button type="submit">Calculate</button>
+            </form>
+            <p id="windchillResult">Wind Chill: --</p>
         </section>
-        <section class="weather">
-            <h2>Weather</h2>
-            <figure>
-                <img class="weather-icon" src="images/weather-icon.webp" alt="weather icon">
-            </figure>
-            <p><b>Temperature:</b> <span>23°C</span></p>
-            <p><b>Humidity:</b> <span>70%</span></p>
-            <p><b>Wind:</b> <span>10 km/h</span></p>
-        </section>
-    </div>
-    <section class="windchill">
-    <h2>Wind Chill Calculator</h2>
-    <form id="windchillForm">
-        <label for="temperature">Temperature (°C):</label>
-        <input type="number" id="temperature" required>
-        <label for="windSpeed">Wind Speed (km/h):</label>
-        <input type="number" id="windSpeed" required>
-        <button type="submit">Calculate</button>
-    </form>
-    <p id="windchillResult">Wind Chill: --</p>
-</section>
-
+</main> 
     <footer class="yellow">
             <div>
                 &copy;
