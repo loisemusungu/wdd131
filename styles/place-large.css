@@ -1,6 +1,6 @@
 @media (min-width: 1024px) {
     body {
-        max-width: 1200px;
+        max-width: var(--max-width-body);
         margin: 0 auto;
     }
 
@@ -36,16 +36,16 @@
     }
 
     .weather-icon {
-        width: 80px;
-        height: 80px;
+        width: var(--weather-icon-size);
+        height: var(--weather-icon-size);
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: var(--font-size-h2);
     }
 
     p {
-        font-size: 1rem;
+        font-size: var(--font-size-p);
         line-height: 0%;
     }
 }
