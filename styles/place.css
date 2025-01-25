@@ -28,14 +28,6 @@ p {
     padding: 10px;
 }
 
-.main {
-    background-image: url('/images/elephant.avif'); /* Replace with the path to your image */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    padding: 20px; /* Adds some padding inside the div */;
-}
-
 .yellow {
     padding: 1rem;
     grid-column: 1 / 2;
