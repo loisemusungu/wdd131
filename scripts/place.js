@@ -30,18 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Calculate wind chill
-    const windChill = calculateWindChill(temperature, windSpeed);
-
-    // Display result
-    result.textContent = `Wind Chill: ${windChill.toFixed(2)}°C`;
+    // Check if conditions for viable wind chill calculation are met
+    if (temperature <= 10 && windSpeed > 4.8) {
+      const windChill = calculateWindChill(temperature, windSpeed);
+      result.textContent = `Wind Chill: ${windChill.toFixed(2)}°C`;
+    } else {
+      result.textContent =
+        "Wind chill cannot be calculated under these conditions.";
+    }
   });
 
   function calculateWindChill(temp, speed) {
-    // Wind chill formula (only applies for temperatures <= 10°C and wind speeds > 4.8 km/h)
-    if (temp > 10 || speed <= 4.8) {
-      return temp; // No significant wind chill
-    }
+    // Wind chill formula
     return (
       13.12 +
       0.6215 * temp -
