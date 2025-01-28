@@ -21,8 +21,14 @@
     </header>
     <main>
         <figure>
-            <img src="images/elephant.webp" alt="African elephant">
+            <img 
+                src="images/elephant-small.webp" 
+                alt="African elephant"
+                srcset="images/elephant-small.webp 600w, 
+                        images/elephant-medium.webp 1024w"
+                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
         </figure>
+
         <div class="main">
             <section class="data">
                 <h2>Data</h2>
