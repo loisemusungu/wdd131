@@ -1,0 +1,89 @@
+body {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+header {
+    padding: 2rem;
+    grid-column: 1 / 4;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.dark-grey {
+    padding: 1rem;
+    grid-column: 1 / 4;
+    background: #333333;
+    color: white;
+    text-align: center;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	list-style: none;
+	background-color: #333;
+	color: #fff;
+}
+
+.navigation a {
+	display: block;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+.navigation a:hover {
+	background-color: #bbb;
+	color: #333;
+	font-weight: 700;
+}
+
+/* .active {
+    background-color: #bbb;
+    color: #333;
+} */
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+.active::before {
+	content: "📍";  /* just a wayfinding symbol for the user */
+} 
+
+.stuff {
+	margin: .5rem;
+	border: 1px solid rgba(0,0,0,.1);
+	background-color: #bed;
+	max-width: 580px;
+	height: 100vh;
+	
+}
+
+/* Images */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
