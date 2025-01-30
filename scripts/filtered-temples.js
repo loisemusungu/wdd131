@@ -77,5 +77,39 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
   },
-  // Add more temple objects here...
+
+  // Added 4 more temple objects //
+  
+  {
+    templeName: "Nairobi Kenya Temple",
+    location: "Nairobi, Kenya",
+    dedicated: "2025, May, 18",
+    area: 78000,
+    imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/nairobi-kenya-temple/nairobi-kenya-temple-56573-main.jpg",
+  },
+  {
+    templeName: "Chicago Illinois Temple",
+    location: "Glenview, Illinois, United States",
+    dedicated: "1985, August, 9",
+    area: 13100,
+    imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/chicago-illinois-temple/chicago-illinois-temple-27308-main.jpg",
+  },
+  {
+    templeName: "Copenhagen Denmark Temple",
+    location: "Copenhagen, Denmark",
+    dedicated: "2004, May, 23",
+    area: 7000,
+    imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/copenhagen-denmark-temple/copenhagen-denmark-temple-16169-main.jpg",
+  },
+  {
+    templeName: "Fortaleza Brazil Temple",
+    location: "Fortaleza, Brazil",
+    dedicated: "2019, June, 2",
+    area: 59000,
+    imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/fortaleza-brazil-temple/fortaleza-brazil-temple-5569-main.jpg",
+  },
 ];
