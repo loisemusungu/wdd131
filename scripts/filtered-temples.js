@@ -79,7 +79,7 @@ const temples = [
   },
 
   // Added 4 more temple objects //
-  
+
   {
     templeName: "Nairobi Kenya Temple",
     location: "Nairobi, Kenya",
@@ -113,3 +113,32 @@ const temples = [
       "https://churchofjesuschristtemples.org/assets/img/temples/fortaleza-brazil-temple/fortaleza-brazil-temple-5569-main.jpg",
   },
 ];
+
+createTempleCard();
+
+function createTempleCard() {
+  temples.forEach(temple => {
+    let card = document.createElement("section");
+    let name = document.createElement("h3");
+    let location = document.createElement("p");
+    let dedication = document.createElement("p");
+    let area = document.createElement("p");
+    let img = document.createElement("img");
+
+    name.textContent = temple.templeName;
+    location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+    dedication.innerHTML = `<span class="label">Dedication:</span> ${temple.dedicated}`;
+    area.innerHTML = `<span class="label">Area:</span> ${temple.area.toLocaleString()} sq ft`;
+    img.setAttribute("src", temple.imageUrl);
+    img.setAttribute("alt", `${temple.templeName} Temple`);
+    img.setAttribute("loading", "lazy");
+
+    card.appendChild(name);
+    card.appendChild(location);
+    card.appendChild(dedication);
+    card.appendChild(area);
+    card.appendChild(img);
+
+    document.querySelector(".gallery").appendChild(card);
+  });
+}

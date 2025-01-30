@@ -3,6 +3,8 @@ body {
     font-weight: 400;
     margin: 0 auto;
     max-width: 800px;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
@@ -12,6 +14,10 @@ header {
 
 h1 {
     font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
 }
 
 .dark-grey {
@@ -73,17 +79,18 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-}
-
-figure {
-    margin: 0;
     text-align: center;
+    justify-items: center;
+    margin: 0 auto;
 }
 
-img {
-    width: 100%;
-    height: auto;
+.gallery img {
+    border-radius: 8px;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
     display: block;
+    grid-column: span 3;
 }
 
 
