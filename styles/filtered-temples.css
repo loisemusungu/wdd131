@@ -87,8 +87,8 @@ h2 {
 
 .gallery img {
     border-radius: 8px;
-    width: 250px;
-    height: 200px;
+    width: 300px;
+    height: 210px;
     object-fit: cover;
     display: block;
     grid-column: span 3;
