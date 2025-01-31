@@ -1,15 +1,9 @@
-// Get the current year using JavaScript
-const year = new Date().getFullYear();
+// Get the current year and last modified date
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.getElementById("lastmodifications").textContent =
+  document.lastModified;
 
-// Set the year inside the element with id="currentyear"
-document.getElementById("currentyear").textContent = year;
-
-// Get the last modified date of the document
-const lastModifiedDate = document.lastModified;
-
-// Set the last modified date inside the element with id="lastmodifications"
-document.getElementById("lastmodifications").textContent = lastModifiedDate;
-
+// Menu toggle functionality
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
 
@@ -18,8 +12,7 @@ hamButton.addEventListener("click", () => {
   hamButton.classList.toggle("open");
 });
 
-// temples array //
-
+// Temples array
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -77,9 +70,6 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
   },
-
-  // Added 4 more temple objects //
-
   {
     templeName: "Nairobi Kenya Temple",
     location: "Nairobi, Kenya",
@@ -114,10 +104,12 @@ const temples = [
   },
 ];
 
-createTempleCard();
+// Function to display temples
+function displayTemples(filteredTemples) {
+  const gallery = document.querySelector(".gallery");
+  gallery.innerHTML = ""; // Clear previous results
 
-function createTempleCard() {
-  temples.forEach(temple => {
+  filteredTemples.forEach((temple) => {
     let card = document.createElement("section");
     let name = document.createElement("h3");
     let location = document.createElement("p");
@@ -139,6 +131,60 @@ function createTempleCard() {
     card.appendChild(area);
     card.appendChild(img);
 
-    document.querySelector(".gallery").appendChild(card);
+    gallery.appendChild(card);
   });
 }
+
+// Function to filter temples
+function filterTemples(category) {
+  let filteredTemples;
+
+  switch (category) {
+    case "Old":
+      filteredTemples = temples.filter((temple) => {
+        const year = parseInt(temple.dedicated.split(",")[0]); // Extract year
+        return year < 1900;
+      });
+      break;
+
+    case "New":
+      filteredTemples = temples.filter((temple) => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
+        return year > 2000;
+      });
+      break;
+
+    case "Large":
+      filteredTemples = temples.filter((temple) => temple.area > 90000);
+      break;
+
+    case "Small":
+      filteredTemples = temples.filter((temple) => temple.area < 10000);
+      break;
+
+    default:
+      filteredTemples = temples; // Show all temples (Home)
+  }
+
+  displayTemples(filteredTemples);
+}
+
+// Event listeners for navigation links
+document.querySelectorAll(".navigation a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default behavior of links
+
+    // Remove "active" class from all links and add to the clicked one
+    document
+      .querySelectorAll(".navigation a")
+      .forEach((item) => item.classList.remove("active"));
+    event.target.classList.add("active");
+
+    // Get the category from the link text and filter temples
+    const category = event.target.textContent;
+    filterTemples(category);
+  });
+});
+
+// Load all temples by default
+displayTemples(temples);
