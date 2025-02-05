@@ -2,16 +2,20 @@
   box-sizing: border-box;
   font-family: poppins, serif;
   font-weight: 400;
+  background-color: #ECF0F1;
+  color: #4A4A4A;
 }
 
 h1 {
     font-family: poppins, serif;
     font-weight: 900;
+    color: #171783;
 }
 
 h2 {
     font-family: poppins, serif;
     font-weight: 700;
+    color: #171783;
 }
 
 span {
