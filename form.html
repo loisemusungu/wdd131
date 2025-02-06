@@ -17,42 +17,54 @@
     </header>
     <main>
         <form>
-            <p>Product Name</p>
-            <label for="dropdown">Choose an option:</label>
-            <select id="dropdown" name="dropdown">
-                <option value="Choose an option">Choose an option</option>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
+            <div class="product-name">
+                <p>Product Name</p>
+                <label for="dropdown">Choose an option:</label>
+                <select id="dropdown" name="dropdown">
+                    <option value="Choose an option">Choose an option</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
 
-            <p>Overall Rating</p>
-            <label for="rating">Rate us:</label>
-            <select id="rating" name="rating">
-                <option value="Choose the rating">Choose the rating</option>
-                <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
-                <option value="4">⭐⭐⭐⭐ - Good</option>
-                <option value="3">⭐⭐⭐ - Average</option>
-                <option value="2">⭐⭐ - Poor</option>
-                <option value="1">⭐ - Bad</option>
-            </select>
+            <div class="product-rating">
+                <p>Overall Rating</p>
+                <label for="rating">Rate us:</label>
+                <select id="rating" name="rating">
+                    <option value="Choose the rating">Choose the rating</option>
+                    <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                    <option value="4">⭐⭐⭐⭐ - Good</option>
+                    <option value="3">⭐⭐⭐ - Average</option>
+                    <option value="2">⭐⭐ - Poor</option>
+                    <option value="1">⭐ - Bad</option>
+                </select>
+            </div>
 
-            <p>Date of Installation</p>
-            <label for="install-date">Select Installation Date:</label>
-            <input type="date" id="install-date" name="install_date">
+            <div class="installation-date">
+                <p>Date of Installation</p>
+                <label for="install-date">Select Installation Date:</label>
+                <input type="date" id="install-date" name="install_date">
+            </div>
 
-            <p>Which features did you find useful in the product?</p>
-            <p>(Check all that apply)</p>
-            <label><input type="checkbox" name="options" value="Durability"> Durability</label><br>
-            <label><input type="checkbox" name="options" value="Ease of Use"> Ease of Use</label><br>
-            <label><input type="checkbox" name="options" value="Performance"> Performance</label><br>
-            <label><input type="checkbox" name="options" value="Design"> Design</label><br>
+            <div>
+                <p>Which features did you find useful in the product?</p>
+                <p>(Check all that apply)</p>
+                <label><input type="checkbox" name="options" value="Durability"> Durability</label><br>
+                <label><input type="checkbox" name="options" value="Ease of Use"> Ease of Use</label><br>
+                <label><input type="checkbox" name="options" value="Performance"> Performance</label><br>
+                <label><input type="checkbox" name="options" value="Design"> Design</label><br>
+            </div>
 
-            <p>Written Review <span>(Optional)</span></p>
-            <textarea id="improvements" name="improvements" rows="4" cols="50"></textarea>
+            <div>
+                <p>Written Review <span>(Optional)</span></p>
+                <textarea id="improvements" name="improvements" rows="4" cols="50"></textarea>
+            </div>
 
-            <p>Your Name <span>(Optional)</span></p>
-            <input type="text" id="name" name="name">
+            <div>
+                <p>Your Name <span>(Optional)</span></p>
+                <input type="text" id="name" name="name">
+            </div>
 
             <div class="submit">
                 <button type="submit">Post Review</button>
