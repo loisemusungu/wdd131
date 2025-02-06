@@ -7,8 +7,68 @@
 
     <meta name="description" content="This is a responsive product review form">
     <meta name="author" content="Loise Musungu">
+
+    <script src="scripts/form.js" defer></script>
+    <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+    <main>
+        <form>
+            <p>Product Name</p>
+            <label for="dropdown">Choose an option:</label>
+            <select id="dropdown" name="dropdown">
+                <option value="Choose an option">Choose an option</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+
+            <p>Overall Rating</p>
+            <label for="rating">Rate us:</label>
+            <select id="rating" name="rating">
+                <option value="Choose the rating">Choose the rating</option>
+                <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                <option value="4">⭐⭐⭐⭐ - Good</option>
+                <option value="3">⭐⭐⭐ - Average</option>
+                <option value="2">⭐⭐ - Poor</option>
+                <option value="1">⭐ - Bad</option>
+            </select>
+
+            <p>Date of Installation</p>
+            <label for="install-date">Select Installation Date:</label>
+            <input type="date" id="install-date" name="install_date">
+
+            <p>Which features did you find useful in the product?</p>
+            <p>(Check all that apply)</p>
+            <label><input type="checkbox" name="options" value="Durability"> Durability</label><br>
+            <label><input type="checkbox" name="options" value="Ease of Use"> Ease of Use</label><br>
+            <label><input type="checkbox" name="options" value="Performance"> Performance</label><br>
+            <label><input type="checkbox" name="options" value="Design"> Design</label><br>
+
+            <p>Written Review <span>(Optional)</span></p>
+            <textarea id="improvements" name="improvements" rows="4" cols="50"></textarea>
+
+            <p>Your Name <span>(Optional)</span></p>
+            <input type="text" id="name" name="name">
+
+            <div class="submit">
+                <button type="submit">Post Review</button>
+            </div>
+        </form>
+    </main>
+    <footer class="yellow">
+            <div>
+                &copy;
+                <span id="currentyear"></span>
+                👩🏽‍💻Loise Musungu. Kenya 🇰🇪
+                <div>
+                    Last Modified <span id="lastmodifications"></span>
+                </div>
+            </div>
+    </footer>
     
 </body>
 </html>
