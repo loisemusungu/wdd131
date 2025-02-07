@@ -16,71 +16,75 @@
         <h1>Product Review Form</h1>
     </header>
     <main>
-        <form>
+        <form method="get" action="review.html">
+            <!-- Product Name Dropdown -->
             <div class="product-name">
-                <p>Product Name</p>
-                <label for="dropdown">Choose an option:</label>
-                <select id="dropdown" name="dropdown">
-                    <option value="Choose an option">Choose an option</option>
+                <label for="product">Product Name:</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
                     <option value="option1">Option 1</option>
                     <option value="option2">Option 2</option>
                     <option value="option3">Option 3</option>
                 </select>
             </div>
 
+            <!-- Overall Rating -->
             <div class="product-rating">
                 <p>Overall Rating</p>
-                <label for="rating">Rate us:</label>
-                <select id="rating" name="rating">
-                    <option value="Choose the rating">Choose the rating</option>
-                    <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
-                    <option value="4">⭐⭐⭐⭐ - Good</option>
-                    <option value="3">⭐⭐⭐ - Average</option>
-                    <option value="2">⭐⭐ - Poor</option>
-                    <option value="1">⭐ - Bad</option>
-                </select>
+                <label>Rate us:</label><br>
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5">⭐⭐⭐⭐⭐ - Excellent</label><br>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">⭐⭐⭐⭐ - Good</label><br>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">⭐⭐⭐ - Average</label><br>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">⭐⭐ - Poor</label><br>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">⭐ - Bad</label>
             </div>
 
+            <!-- Date of Installation -->
             <div class="installation-date">
-                <p>Date of Installation</p>
-                <label for="install-date">Select Installation Date:</label>
-                <input type="date" id="install-date" name="install_date">
+                <label for="install-date">Date of Installation:</label>
+                <input type="date" id="install-date" name="install_date" required>
             </div>
 
+            <!-- Useful Features (Checkboxes) -->
             <div>
-                <p>Which features did you find useful in the product?</p>
-                <p>(Check all that apply)</p>
-                <label><input type="checkbox" name="options" value="Durability"> Durability</label><br>
-                <label><input type="checkbox" name="options" value="Ease of Use"> Ease of Use</label><br>
-                <label><input type="checkbox" name="options" value="Performance"> Performance</label><br>
-                <label><input type="checkbox" name="options" value="Design"> Design</label><br>
+                <p>Which features did you find useful in the product? (Check all that apply)</p>
+                <label><input type="checkbox" id="durability" name="features[]" value="Durability"> Durability</label><br>
+                <label><input type="checkbox" id="ease" name="features[]" value="Ease of Use"> Ease of Use</label><br>
+                <label><input type="checkbox" id="performance" name="features[]" value="Performance"> Performance</label><br>
+                <label><input type="checkbox" id="design" name="features[]" value="Design"> Design</label><br>
             </div>
 
+            <!-- Written Review (Optional) -->
             <div>
-                <p>Written Review <span>(Optional)</span></p>
+                <label for="improvements">Written Review (Optional):</label>
                 <textarea id="improvements" name="improvements" rows="4" cols="50"></textarea>
             </div>
 
+            <!-- User Name (Optional) -->
             <div>
-                <p>Your Name <span>(Optional)</span></p>
+                <label for="name">Your Name (Optional):</label>
                 <input type="text" id="name" name="name">
             </div>
 
+            <!-- Submit Button -->
             <div class="submit">
-                <button type="submit">Post Review</button>
+                <input type="submit" value="Post Review">
             </div>
         </form>
     </main>
+
     <footer class="yellow">
+        <div>
+            &copy; <span id="currentyear"></span> 👩🏽‍💻Loise Musungu. Kenya 🇰🇪
             <div>
-                &copy;
-                <span id="currentyear"></span>
-                👩🏽‍💻Loise Musungu. Kenya 🇰🇪
-                <div>
-                    Last Modified <span id="lastmodifications"></span>
-                </div>
+                Last Modified <span id="lastmodifications"></span>
             </div>
+        </div>
     </footer>
-    
 </body>
 </html>
