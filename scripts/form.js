@@ -37,3 +37,21 @@ function populateProductDropdown() {
 
 // Run the function to populate dropdown on page load
 document.addEventListener("DOMContentLoaded", populateProductDropdown);
+
+// Function to update and display review count
+function updateReviewCount() {
+    let count = localStorage.getItem("reviewCount");
+
+    if (count === null) {
+        count = 0;
+    }
+
+    count = parseInt(count) + 1;
+    localStorage.setItem("reviewCount", count);
+
+    // Display the count (ensure you have an element with id="review-count" in `review.html`)
+    document.getElementById("review-count").textContent = count;
+}
+
+// Run only when `review.html` loads
+document.addEventListener("DOMContentLoaded", updateReviewCount);
