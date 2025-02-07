@@ -1,27 +1,88 @@
+/* Reset and Global Styles */
 * {
+    box-sizing: border-box;
+}
+
+body {
     max-width: 800px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0 auto;
-}
-
-main {
-    background: #f4f4f4;
+    background-color: #eef2f3;
     padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 1rem;
 }
 
+/* Header */
 header {
     background: #333;
     color: white;
     text-align: center;
     padding: 1rem;
+    border-radius: 5px;
 }
 
+/* Main Content */
+main {
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+/* Inputs, Selects, and Textarea */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Checkboxes and Radio Buttons */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background: #333;
+    color: white;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #555;
+}
+
+/* Footer */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 5px;
 }
