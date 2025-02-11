@@ -1,0 +1,103 @@
+:root {
+    --heading-color: #171783; /* Blue */
+    --body-text-color: #4A4A4A; /* Dark Gray */
+    --background-color: #ECF0F1; /* Light Gray */
+    --button-color: #F4A261; /* Warm Gold */
+    --button-hover-color: #E08E4F; /* Slightly darker gold for hover effect */
+}
+
+body {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: var(--background-color);
+    color: var(--body-text-color);
+}
+
+header {
+    padding: 2rem;
+    grid-column: 1 / 4;
+    justify-content:center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--button-color);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--heading-color);
+}
+
+.dark-grey {
+    padding: 1rem;
+    grid-column: 1 / 4;
+    background: var(--body-text-color);
+    color: var(--body-text-color);
+    text-align: center;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	list-style: none;
+	background-color: var(--background-color);
+	color: var(--button-hover-color);
+}
+
+.navigation a {
+	display: block;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: var(--body-text-color);
+}
+.navigation a:hover {
+	background-color: #bbb;
+	color: var(--button-hover-color);
+	font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+.active::before {
+	content: "📍";  /* just a wayfinding symbol for the user */
+} 
+
+.stuff {
+	margin: .5rem;
+	border: 1px solid rgba(0,0,0,.1);
+	background-color: #bed;
+	max-width: 580px;
+	height: 100vh;
+	
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: var(--body-text-color);
+    background-color: var(--button-color); /* Blue color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded edges */
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--button-hover-color); /* Darker blue on hover */
+}
+
