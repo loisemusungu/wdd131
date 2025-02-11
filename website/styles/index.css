@@ -101,3 +101,9 @@ h2 {
     background-color: var(--button-hover-color); /* Darker blue on hover */
 }
 
+.footer {
+    color: var(--background-color);
+    background-color: var(--body-text-color);
+    text-align: center;
+}
+
