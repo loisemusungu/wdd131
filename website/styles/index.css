@@ -117,7 +117,7 @@ h2 {
 
 .social-icon {
     font-size: 24px;
-    color: var(--heading-color);
+    color: var(--button-color);
     text-decoration: none;
     transition: color 0.3s;
 }
