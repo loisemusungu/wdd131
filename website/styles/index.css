@@ -93,6 +93,7 @@ h2 {
     border-radius: 8px;
 }
 
+/* buttons */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -107,6 +108,24 @@ h2 {
 .btn:hover {
     background-color: var(--button-hover-color); /* Darker blue on hover */
 }
+
+/* Icons */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: var(--heading-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--button-hover-color); 
+}
+
 
 .footer {
     color: var(--background-color);
