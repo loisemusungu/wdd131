@@ -13,6 +13,7 @@ body {
     max-width: 800px;
     background-color: var(--background-color);
     color: var(--body-text-color);
+    border: 2px solid var(--button-color);
 }
 
 header {
@@ -98,7 +99,7 @@ h2 {
     border-radius: 8px;
 }
 
-.article-img {
+.article-img, .team-card img{
     width: 100%;
     height: auto;
     display: block;
@@ -148,5 +149,28 @@ h2 {
     color: var(--background-color);
     background-color: var(--body-text-color);
     text-align: center;
+}
+
+/* Form */
+.join-form {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.join-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
