@@ -17,32 +17,46 @@ if (hamButton && navigation) {
   });
 }
 
-// Form validation
-const joinForm = document.getElementById("joinForm");
+// Ensure the DOM is fully loaded before executing scripts
+document.addEventListener("DOMContentLoaded", function () {
+  const joinForm = document.getElementById("joinForm");
 
-if (joinForm) {
-  joinForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-    const errorMessage = document.getElementById("error-message");
+  if (joinForm) {
+    // Retrieve saved data from localStorage and pre-fill the form
+    const savedName = localStorage.getItem("name");
+    const savedEmail = localStorage.getItem("email");
 
-    if (!errorMessage) return;
-    errorMessage.textContent = "";
+    if (savedName) document.getElementById("name").value = savedName;
+    if (savedEmail) document.getElementById("email").value = savedEmail;
 
-    if (!name || !email || !password) {
-      errorMessage.textContent = "All fields are required.";
-    } else if (!validateEmail(email)) {
-      errorMessage.textContent = "Please enter a valid email.";
-    } else if (password.length < 6) {
-      errorMessage.textContent = "Password must be at least 6 characters long.";
-    } else {
-      alert("Form submitted successfully!");
-      joinForm.submit();
-    }
-  });
-}
+    joinForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const errorMessage = document.getElementById("error-message");
+
+      if (!errorMessage) return;
+      errorMessage.textContent = "";
+
+      if (!name || !email || !password) {
+        errorMessage.textContent = "All fields are required.";
+      } else if (!validateEmail(email)) {
+        errorMessage.textContent = "Please enter a valid email.";
+      } else if (password.length < 6) {
+        errorMessage.textContent = "Password must be at least 6 characters long.";
+      } else {
+        // Store data in localStorage
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+
+        alert("Form submitted successfully!");
+        joinForm.submit(); // Proceed with form submission
+      }
+    });
+  }
+});
 
 // Function to validate email format
 function validateEmail(email) {
