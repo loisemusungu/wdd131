@@ -111,6 +111,21 @@ h2 {
     border-radius: 8px;
 }
 
+.team-card img {
+    width: 200px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
 /* buttons */
 .btn {
     display: inline-block;
