@@ -86,7 +86,7 @@ h2 {
     border: 2px solid var(--heading-color);
 }
 
-.about-us, .blog-container, .join {
+.about-us, .blog-container, .join, section {
     border: 1px solid var(--body-text-color);
     padding: 1rem;
     border-radius: 8px;
@@ -215,13 +215,13 @@ h2 {
     }
 
     .about-us,
-    .blog,
+    .blog-preview,
     .join {
         max-width: 80%;
         margin: 2rem auto;
     }
 
-    .blog {
+    .blog-preview {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -267,7 +267,7 @@ h2 {
         text-align: center;
     }
 
-    .blog {
+    .blog-preview {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
