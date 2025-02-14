@@ -86,7 +86,7 @@ h2 {
     border: 2px solid var(--heading-color);
 }
 
-.about-us, .blog-container, .join, section {
+.about-us, .blog-container, .join {
     border: 1px solid var(--body-text-color);
     padding: 1rem;
     border-radius: 8px;
